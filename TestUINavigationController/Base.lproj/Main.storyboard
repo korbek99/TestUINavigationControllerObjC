@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hYX-He-Vk1">
+            <objects>
+                <navigationController id="KPe-4k-GIb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9QD-jx-Now">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dIA-BH-6br" kind="relationship" relationship="rootViewController" id="sJW-bA-PhD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adg-Y0-Uk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-169" y="162"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RpF-l4-Q2C">
+            <objects>
+                <viewController id="dIA-BH-6br" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0r9-hH-ve2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZgI-qG-SAA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jQ5-Sk-Wn6" customClass="viewcon">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EJEMPLO NAVEGACION NAVIGATOR CONTROLLER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weG-OR-E5B">
+                                <rect key="frame" x="22" y="127" width="330" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigator.png" translatesAutoresizingMaskIntoConstraints="NO" id="38u-HY-1IM">
+                                <rect key="frame" x="67" y="171" width="241" height="256"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7A-cg-Shc">
+                                <rect key="frame" x="126" y="463" width="111" height="30"/>
+                                <state key="normal" title="CAMBIAR VISTA"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A7A-cg-Shc" firstAttribute="top" secondItem="38u-HY-1IM" secondAttribute="bottom" constant="36" id="5hn-LB-qwd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A7A-cg-Shc" secondAttribute="trailing" constant="122" id="7AI-dd-1vW"/>
+                            <constraint firstItem="weG-OR-E5B" firstAttribute="top" secondItem="0r9-hH-ve2" secondAttribute="bottom" constant="63" id="L9O-wq-TUd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="weG-OR-E5B" secondAttribute="trailing" constant="7" id="O5h-63-KV4"/>
+                            <constraint firstItem="38u-HY-1IM" firstAttribute="leading" secondItem="jQ5-Sk-Wn6" secondAttribute="leadingMargin" constant="51" id="S1O-hK-Dse"/>
+                            <constraint firstItem="weG-OR-E5B" firstAttribute="leading" secondItem="jQ5-Sk-Wn6" secondAttribute="leadingMargin" constant="6" id="cdo-cS-DPN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="38u-HY-1IM" secondAttribute="trailing" constant="51" id="i5p-U6-9F6"/>
+                            <constraint firstItem="A7A-cg-Shc" firstAttribute="leading" secondItem="jQ5-Sk-Wn6" secondAttribute="leadingMargin" constant="110" id="ipm-Bp-15I"/>
+                            <constraint firstItem="38u-HY-1IM" firstAttribute="top" secondItem="weG-OR-E5B" secondAttribute="bottom" constant="28" id="wm5-8w-oAO"/>
+                            <constraint firstItem="ZgI-qG-SAA" firstAttribute="top" secondItem="A7A-cg-Shc" secondAttribute="bottom" constant="174" id="wyS-DW-J2R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oib-st-EQS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phT-PQ-Kkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511.19999999999999" y="161.46926536731635"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="navigator.png" width="256" height="256"/>
+    </resources>
+</document>
